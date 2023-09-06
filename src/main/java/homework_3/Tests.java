@@ -3,7 +3,7 @@ package homework_3;
 import static homework_3.CheckInput.*;
 
 public class Tests {
-    public static void runTestString(){
+    public static void runTestWord(){
         System.out.println("---string test(true)---");
         System.out.println(isWord("",true)); // true
         System.out.println(isWord("john")); // true
@@ -28,7 +28,6 @@ public class Tests {
         System.out.println("---phone test(true)---");
         System.out.println(isPhone("+71234567890")); // true
         System.out.println(isPhone("71234567890")); // true
-        System.out.println(isPhone("+7 123 456-78-90")); // true
         System.out.println(isPhone("103")); // true
         System.out.println(isPhone("911")); // true
         System.out.println(isPhone("01")); // true
@@ -38,6 +37,7 @@ public class Tests {
         System.out.println(isPhone("2------2")); // true
 
         System.out.println("---phone test(false)---");
+        System.out.println(isPhone("+7 123 456-78-90")); // false
         System.out.println(isPhone("+7_123_456-78-90")); // false
         System.out.println(isPhone("911/")); // false
         System.out.println(isPhone("1")); // false
